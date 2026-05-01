@@ -14,6 +14,11 @@ def home():
     return jsonify({"message": "Flask + MongoDB API is running"})
 
 
+@app.route("/test")
+def test():
+    return "PR test"
+
+
 # ✅ Create new user API
 @app.route('/users', methods=['POST'])
 def create_user():
