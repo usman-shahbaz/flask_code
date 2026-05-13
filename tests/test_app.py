@@ -15,3 +15,7 @@ def test_home():
 
     assert response.status_code == 200
     assert "message" in data
+
+def test_home_response_type():
+    client = app.test_client()
+    
