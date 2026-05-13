@@ -18,4 +18,4 @@ def test_home():
 
 def test_home_response_type():
     client = app.test_client()
-    response = client.get('/')
+    response = client.get('/')\\\
