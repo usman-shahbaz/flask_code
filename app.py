@@ -9,7 +9,7 @@ db = client["mydatabase"]
 users_collection = db["users"]
 
 # Home route
-@app.route('/')
+@app.route('/health')
 def home():
     return jsonify({"message": "Flask + MongoDB API is running"})
 
