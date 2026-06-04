@@ -23,3 +23,8 @@ def test_home_message_value():
     data = response.get_json()
 
     assert data["message"] == "Hello, World!"
+
+def test_invalid_route():
+    client = app.test_client()
+    response = client.get('/invalid-route')
+
