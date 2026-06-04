@@ -15,3 +15,11 @@ def test_home():
 
     assert response.status_code == 200
     assert "message" in data
+
+
+def test_home_message_value():
+    client = app.test_client()
+    response = client.get('/')
+    data = response.get_json()
+
+    assert data["message"] == "Hello, World!"
