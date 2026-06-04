@@ -28,3 +28,5 @@ def test_invalid_route():
     client = app.test_client()
     response = client.get('/invalid-route')
 
+    assert response.status_code == 404
+
